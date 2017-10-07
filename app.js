@@ -6,6 +6,8 @@ app.set("view engine", "jade");
 
 var route = require("./routing/route.js");
 
+app.use(express.static(__dirname + '/public'));
+
 app.get("/",function(req,res){
 	res.render("index");
 });
