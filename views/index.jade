@@ -5,5 +5,38 @@ html
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous")
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	body
-		div(class="container-fluid bg" style="background-image: url('public/img/web-bg.jpg');")
-			h1 Inicio
+		div(class="container-fluid bg" style="background-color: url('public/img/web-bg.jpg');")
+
+			nav(class="navbar navbar-dark bg-dark")
+				form(method="post" action="/")
+					div(class="input-group")
+						label(class="font-weight-bold") Nombre
+						input(type="text" name="name" placeholder="Nombre" class="form-control")
+						label(class="font-weight-bold") Apellido
+						input(type="text" name="surname" placeholder="Apellido" class="form-control")
+						input(type="submit" class="btn btn-success" value="Entrar")
+			
+			div(class="row")
+				div(class="col-sm-2 mx-auto align-items-center")
+					h2(class="font-weight-bold") Registrarse
+					form(method="post" action="/")
+						div(class="form-group")
+							label(class="font-weight-bold") Nombre
+							input(type="text" name="name" placeholder="Nombre" class="form-control")
+						div(class="form-group")
+							label(class="font-weight-bold") Apellido
+							input(type="text" name="surname" placeholder="Apellido" class="form-control")
+						div(class="form-group")
+							label(class="font-weight-bold") Email
+							input(type="text" name="email" placeholder="Email" class="form-control")
+						div(class="form-group")
+							label(class="font-weight-bold") Edad
+							input(type="number" name="age" placeholder="Edad" class="form-control")
+						div(class="form-group")
+							label(class="font-weight-bold") Contraseña
+							input(type="password" name="pass" placeholder="Contraseña" class="form-control")
+						div(class="form-group")
+							label(class="font-weight-bold") Repita su contraseña
+							input(type="password" name="repass" placeholder="Repita su contraseña" class="form-control")
+						div(class="form-group")
+							input(type="submit" class="btn btn-primary" value="Registrarse")
